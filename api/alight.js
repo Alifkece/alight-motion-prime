@@ -12,7 +12,6 @@ app.post('/api/alight', async (req, res) => {
         if (!email) {
             return res.status(400).json({ success: false, error: 'Email is required' });
         }
-        // link boleh null / undefined
         const result = await alightPro(email, link || null);
         res.json(result);
     } catch (error) {
@@ -20,7 +19,7 @@ app.post('/api/alight', async (req, res) => {
     }
 });
 
-// Untuk local development
+// Kalo di Vercel, gak perlu listen, tapi buat lokal jalan
 if (process.env.NODE_ENV !== 'production') {
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
