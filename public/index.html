@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENERATE ALIGHT MOTION PREMIUM</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #000;
+            --text: #fff;
+            --muted: #aaa;
+            --primary: #ff0000;
+            --secondary: #AD4AE7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body {
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,.1), transparent 30%),
+                radial-gradient(circle at 80% 10%, rgba(255,255,255,.08), transparent 25%),
+                radial-gradient(circle at 50% 90%, rgba(255,255,255,.05), transparent 30%),
+                var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1100px; margin: auto; }
+
+        .profile-wrapper {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            padding: 5px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            box-shadow: 0 0 25px rgba(173,74,231,.5);
+            animation: glow 4s infinite alternate;
+        }
+        .profile-wrapper video {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        @keyframes glow {
+            0% { box-shadow: 0 0 15px var(--primary); }
+            100% { box-shadow: 0 0 30px var(--secondary); }
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .title { font-family: 'Orbitron', sans-serif; font-size: 36px; font-weight: 800; }
+        .subtitle { color: var(--muted); }
+
+        .section {
+            background: rgba(255,255,255,.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .label { margin-bottom: 8px; font-weight: 600; color: #ddd; }
+        .input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 12px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .input:focus { outline: none; border-color: var(--secondary); }
+
+        .hint { font-size: 13px; color: #888; margin-bottom: 15px; }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform .2s;
+        }
+        .btn:hover { transform: scale(1.02); }
+        .btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+        .loading {
+            display: none;
+            margin-top: 15px;
+            color: var(--secondary);
+            text-align: center;
+        }
+
+        .result-area { display: none; }
+        .result-box {
+            background: rgba(255,255,255,.05);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .result-box pre {
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: #0f0;
+            font-size: 14px;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .status-success { background: #00c853; color: #fff; }
+        .status-fail { background: #d32f2f; color: #fff; }
+
+        .info ul { margin-left: 20px; }
+        .info li { margin-bottom: 8px; }
+
+        .note {
+            margin-top: 15px;
+            background: rgba(173,74,231,.1);
+            border-left: 4px solid #fff900;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- PROFILE -->
+    <div class="profile-wrapper">
+        <video src="https://files.catbox.moe/84lt73.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1 class="title">GENERATE ALIGHT MOTION PREMIUM</h1>
+        <p class="subtitle">Powered By Aliftzycrt🍓</p>
+    </div>
+
+    <!-- FORM -->
+    <div class="section">
+        <h2 class="section-title">
+            <i class="fas fa-envelope"></i> Magic Link
+        </h2>
+
+        <label class="label">
+            <i class="fas fa-at"></i> Email
+        </label>
+        <input type="email" id="email" class="input" placeholder="your@email.com">
+        <div class="hint">Masukkan email yang terdaftar di Alight Motion</div>
+
+        <button class="btn" id="btnSend" onclick="sendLink()">
+            <i class="fas fa-paper-plane"></i> Kirim Magic Link
+        </button>
+
+        <div class="loading" id="loadingSend">
+            <i class="fas fa-spinner fa-spin"></i> Mengirim link...
+        </div>
+    </div>
+
+    <!-- VERIFY -->
+    <div class="section" id="verifySection" style="display:none;">
+        <h2 class="section-title">
+            <i class="fas fa-check-circle"></i> Verifikasi
+        </h2>
+
+        <label class="label">
+            <i class="fas fa-link"></i> OOB Link
+        </label>
+        <input type="text" id="link" class="input" placeholder="https://alight-creative.firebaseapp.com/...">
+        <div class="hint">Tempel link dari email yang lo terima</div>
+
+        <button class="btn" id="btnVerify" onclick="verifyLink()">
+            <i class="fas fa-unlock"></i> Aktifkan Premium
+        </button>
+
+        <div class="loading" id="loadingVerify">
+            <i class="fas fa-spinner fa-spin"></i> Memproses...
+        </div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="section result-area" id="resultArea">
+        <h2 class="section-title">
+            <i class="fas fa-crown"></i> Hasil Aktivasi
+        </h2>
+        <div class="result-box" id="resultContent"></div>
+    </div>
+
+    <!-- INFO -->
+    <div class="section info">
+        <h2 class="section-title">
+            <i class="fas fa-info-circle"></i> Cara Menggunakan
+        </h2>
+        <ul>
+            <li>Masukkan email lo, lalu klik <b>Kirim Magic Link</b></li>
+            <li>Cek inbox / spam, cari email dari <b>AlightPro</b></li>
+            <li>Salin link OOB (biasanya panjang)</li>
+            <li>Tempel link di kolom <b>OOB Link</b>, lalu klik <b>Aktifkan Premium</b></li>
+            <li>Lihat hasilnya di bawah</li>
+        </ul>
+        <div class="note">
+            <i class="fas fa-lightbulb"></i>
+            <b>Note:</b> Ini untuk test pribadi, jangan disebar. Pastikan email lo aktif.
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentEmail = '';
+
+    async function sendLink() {
+        const email = document.getElementById('email').value.trim();
+        if (!email) { alert('Masukkan email dulu!'); return; }
+
+        const btn = document.getElementById('btnSend');
+        const loading = document.getElementById('loadingSend');
+        btn.disabled = true;
+        loading.style.display = 'block';
+        document.getElementById('resultArea').style.display = 'none';
+        document.getElementById('verifySection').style.display = 'none';
+
+        try {
+            const res = await fetch('/api/alight', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, link: null })
+            });
+            const data = await res.json();
+            if (data.success) {
+                currentEmail = email;
+                document.getElementById('verifySection').style.display = 'block';
+                alert('✅ Link berhasil dikirim! Cek email lo (termasuk spam).');
+            } else {
+                alert('❌ Gagal: ' + (data.message || data.error || 'Unknown error'));
+            }
+        } catch (err) {
+            alert('Error: ' + err.message);
+        } finally {
+            btn.disabled = false;
+            loading.style.display = 'none';
+        }
+    }
+
+    async function verifyLink() {
+        const link = document.getElementById('link').value.trim();
+        if (!link) { alert('Masukkan OOB link!'); return; }
+
+        const btn = document.getElementById('btnVerify');
+        const loading = document.getElementById('loadingVerify');
+        btn.disabled = true;
+        loading.style.display = 'block';
+        document.getElementById('resultArea').style.display = 'none';
+
+        try {
+            const res = await fetch('/api/alight', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: currentEmail, link })
+            });
+            const data = await res.json();
+
+            const resultDiv = document.getElementById('resultContent');
+            const area = document.getElementById('resultArea');
+
+            if (data.success && data.premium) {
+                resultDiv.innerHTML = `
+                    <div class="status-badge status-success">✅ PREMIUM ACTIVE</div>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <div class="status-badge status-fail">❌ GAGAL</div>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                `;
+            }
+            area.style.display = 'block';
+        } catch (err) {
+            alert('Error: ' + err.message);
+        } finally {
+            btn.disabled = false;
+            loading.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>
